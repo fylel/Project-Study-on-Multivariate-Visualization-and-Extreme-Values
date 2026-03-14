@@ -1,9 +1,106 @@
-This project used Monte Carlo simulation to investigate the statistical properties and testing performance of normality test statistics, with a focus on the Jarque–Bera test. The study aimed to verify the theoretical distribution of the Jarque–Bera statistic and compare its performance with other commonly used normality tests.
+# Monte Carlo Simulation for Normality Tests
 
-The research began with a theoretical analysis and employed random simulations to examine the distributional behavior of statistics constructed from skewness and kurtosis across different sample sizes. The goal was to evaluate whether the Jarque–Bera test statistic follows its theoretical Chi-square distribution under the assumption of normality.
+This project investigates the statistical properties and performance of several **normality tests** using **Monte Carlo simulation**, with a primary focus on the **Jarque–Bera test**.
 
-Methodologically, large-scale simulations were conducted under varying sample sizes. The resulting statistics were analyzed through histograms and empirical cumulative distribution functions (Empirical CDF) and compared with the theoretical distribution to assess the goodness-of-fit between the simulated and theoretical results. In addition, the Jarque–Bera test was implemented as a statistical testing function to compute the test statistic and corresponding p-value for use in subsequent simulation experiments.
+The study verifies whether the Jarque–Bera statistic follows its theoretical **Chi-square distribution** under normality and compares its performance with other widely used normality tests under different distributions and sample sizes.
 
-To evaluate the practical performance of different normality tests, the study further compared the Jarque–Bera test, Shapiro–Wilk test, and Anderson–Darling test, along with the Jarque–Bera implementation from the SciPy package. Their statistical power was evaluated under different underlying distributions, including the normal distribution, t-distribution, uniform distribution, and chi-square distribution, as well as varying sample sizes.
+---
 
-Through Monte Carlo simulation results, the study analyzed differences among these methods in maintaining the nominal significance level and detecting non-normal distributions, thereby providing insights into the applicability and comparative performance of different normality tests in statistical inference.
+# Project Objectives
+
+The primary goals of this project are:
+
+- Verify the **theoretical Chi-square distribution** of the Jarque–Bera statistic.
+- Analyze the **distributional behavior of skewness and kurtosis-based statistics**.
+- Compare the **performance and statistical power** of multiple normality tests.
+- Evaluate how well different tests **detect non-normal distributions**.
+
+---
+
+# Methodology
+
+## Monte Carlo Simulation
+
+Large-scale **Monte Carlo simulations** were conducted to analyze the statistical properties of normality test statistics.
+
+Simulations were performed under varying **sample sizes** to investigate how the distribution of the Jarque–Bera statistic behaves as sample size increases.
+
+---
+
+## Distributional Analysis
+
+The study examined statistics constructed from **sample skewness and kurtosis**, which form the basis of the Jarque–Bera test.
+
+The empirical distribution of the test statistic was analyzed using:
+
+- **Histograms**
+- **Empirical Cumulative Distribution Functions (Empirical CDF)**
+
+These results were compared with the theoretical **Chi-square distribution** to evaluate their goodness-of-fit.
+
+---
+
+## Implementation of the Jarque–Bera Test
+
+A custom implementation of the **Jarque–Bera test** was developed.
+
+The function computes:
+
+- **Jarque–Bera test statistic**
+- **p-value based on the Chi-square distribution**
+
+This implementation was used in subsequent simulation experiments and compared with the implementation available in the **SciPy library**.
+
+---
+
+# Comparison of Normality Tests
+
+To evaluate practical performance, several commonly used normality tests were compared:
+
+- **Jarque–Bera Test**
+- **Shapiro–Wilk Test**
+- **Anderson–Darling Test**
+- **SciPy Jarque–Bera Implementation**
+
+---
+
+## Evaluation Criteria
+
+The tests were evaluated based on the following criteria:
+
+### Type I Error Control
+Whether the test maintains the nominal significance level under normality.
+
+### Statistical Power
+The ability of the test to detect deviations from normality.
+
+---
+
+# Experimental Settings
+
+The simulations were conducted under multiple underlying distributions:
+
+- **Normal Distribution**
+- **t-Distribution**
+- **Uniform Distribution**
+- **Chi-square Distribution**
+
+Different **sample sizes** were considered to analyze how test performance varies with increasing data size.
+
+---
+
+# Results and Insights
+
+Monte Carlo simulation results reveal differences in how various normality tests perform across different scenarios.
+
+Key observations include:
+
+- The **Jarque–Bera statistic** approaches the theoretical **Chi-square distribution** as the sample size increases.
+- Different tests exhibit **different levels of sensitivity** to skewness and kurtosis.
+- Some tests perform better under specific **non-normal distributions**.
+
+These results provide insights into the **comparative performance and applicability** of different normality tests in statistical inference.
+
+---
+
+# Project Structure
